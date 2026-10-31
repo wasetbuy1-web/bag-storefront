@@ -386,7 +386,6 @@
     const productDisplayName = product => product.nameEn || product.name;
     function normalizeImageUrl(value) {
       const raw = String(value || '').trim();
-      if (raw.startsWith('imgs/')) return raw;
       try {
         const parsed = new URL(raw);
         return ['http:', 'https:'].includes(parsed.protocol) ? parsed.href : '';
